@@ -1,0 +1,151 @@
+.plug-box
+  background-color: $color-primary--1
+  width: 29%
+  margin: 0.6em 0 0.6em 67%
+  padding: 1em 3em 1em 1em
+  outline: none
+  position: relative
+  overflow: auto
+  box-sizing: border-box
+  span
+    background-color: $color-primary--5
+    display: block
+    height: 100%
+    position: absolute
+    line-height: 2.3em
+    right: 0
+    top: 0
+    font-size: 3em
+    width: 1em
+    text-align: center
+  h1
+    color: $color-senary
+    margin-bottom: 0.3em
+    font-size: 0.8em
+    font-family: $font-family--head-bold
+  &.border-1:hover
+    span,
+    h1
+      color: $color-secondary
+  &.border-2:hover
+    span,
+    h1
+      color: $color-quaternary
+  &.border-3:hover
+    span,
+    h1
+      color: $color-quinary
+
+button
+  border: 0
+  background-color: $color-primary--1
+  color: $color-senary
+  // padding: 0.8em
+  font-size: 0.8em
+
+.btn
+  @include side-color-box($color-secondary--1, $color-secondary, 1.5em)
+
+// best:
+// .btn
+//   padding: 25px 60px 25px 120px
+//   background: #fcad26
+//   color: #fff
+//   margin: 15px 30px
+//   text-transform: uppercase
+//   letter-spacing: 1px
+//   font-weight: 700
+//   outline: none
+//   position: relative
+//   overflow: auto
+//   span
+//     background-color: $color-primary--5
+//     display: block
+//     height: 100%
+//     position: absolute
+//     line-height: 50px
+//     right: 0
+//     top: 0
+//     text-size: 2em
+//     width: 2.5em
+//     vertical-align: middle
+//     text-align: center
+
+// .btn
+//   display: inline-block
+//   height: 50px
+//   line-height: 50px
+//   padding-left: 30px
+//   padding-right: 70px
+//   position: relative
+//   background-color: rgb(41,127,184)
+//   color: rgb(255,255,255)
+//   text-decoration: none
+//   text-transform: uppercase
+//   letter-spacing: 1px
+//   margin-bottom: 15px
+//   // text-shadow: 0px 1px 0px rgba(0,0,0,0.5)
+//   span
+//     position: absolute
+//     right: 0
+//     width: 50px
+//     background-color: rgba(0,0,0,0.5)
+//     // border-left: 1px solid rgba(0,0,0,0.15)
+//     &:hover span,
+//     &:active span
+//       background-color: rgb(0,102,26)
+//       // border-left: 1px solid rgba(0,0,0,0.3)
+//     &:active
+//       margin-top: 2px
+//       margin-bottom: 13px
+
+.submit
+  background-color: $color-secondary--1
+  color: $color-primary--5
+
+.side-form
+  background-color: $color-primary--1
+
+.details
+  color: $color-primary--3
+  font-size: 0.5em
+  a
+    color: $color-primary--3
+    &:hover
+      color: $color-tertiary
+  .details--icon
+    margin: 0 0.3em 0 0
+
+.text-color-1
+  color: $color-senary
+  a
+    color: $color-senary
+
+.icon-list
+  li
+    display: inline-block
+    font-size: 1em
+    color: $color-primary--3
+
+.side
+  float: right
+  padding: 1em
+
+.details--placement1
+  text-align: right
+  margin-top: -0.3em
+
+.border-1
+  @include top-border($color-secondary)
+
+.border-2
+  @include top-border($color-quaternary)
+
+.border-3
+  @include top-border($color-quinary)
+
+.border-4
+  border-bottom: 0.3em solid $color-tertiary
+
+
+

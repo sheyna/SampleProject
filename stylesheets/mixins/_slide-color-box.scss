@@ -1,0 +1,21 @@
+@mixin side-color-box($bgcolor, $bgcolor-span, $line-height) {
+  padding: 1em 3em 1em 1em;
+  background-color: $bgcolor;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  overflow: auto;
+  span {
+    background-color: $bgcolor-span;
+    display: block;
+    height: 100%;
+    position: absolute;
+    line-height: $line-height;
+    right: 0;
+    top: 0;
+    font-size: 3em;
+    width: 2.5em;
+    text-align: center;
+  }
+}
+
