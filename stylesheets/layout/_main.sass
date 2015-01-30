@@ -1,15 +1,22 @@
-.sidebox
-  @include container()
-  background-color: $color-secondary
-  border-top: 0.5em solid $color-secondary--1
-  // width: 100%
-  text-align: center
-  h1
-    font-family: $font-family--primary
-    display: inline-block
-    font-size: 1.2em
-  button
-    display: inline-block
+.main
+  padding: 2em 4% 2em 8%
+  position: relative
+  @media only screen and (max-width: 800px)
+    padding: 3%
 
-.building-block
-  @include container()
+article
+  h1
+    font-size: 1.37em
+    font-family: $font-family--heading
+    font-weight: bold
+    margin-bottom: 0.6em
+    @media only screen and (max-width: 450px)
+      font-size: 1.6em
+      line-height: 1.2em
+  p
+    font-size: 0.65em
+    color: $color-primary--2
+    line-height: 1.5em
+    margin-bottom: 0.6em
+    @media only screen and (max-width: 450px)
+      font-size: 0.8em

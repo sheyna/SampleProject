@@ -2,17 +2,19 @@
   max-width: 100%
   margin: 0 auto 0 auto
   height: $hero-slider-height
+  @media only screen and (max-width: 800px)
+    height: $hero-slider-height-tablet
+  @media only screen and (max-width: 450px)
+    height: $hero-slider-height-mobile
 
 .slide-viewer
   position: relative
   overflow: hidden
   height: $hero-slider-height
-  // @media only screen and (max-width: 850px)
-  //   height: 140px
-  // @media only screen and (max-width: 650px)
-  //   height: 90px
-  // @media only screen and (max-width: 450px)
-  //   height: 80px
+  @media only screen and (max-width: 800px)
+    height: $hero-slider-height-tablet
+  @media only screen and (max-width: 450px)
+    height: $hero-slider-height-mobile
   .slide-group
     width: 100%
     height: 100%
@@ -26,12 +28,40 @@
         display: block
       img
         width: 100%
+        @media only screen and (max-width: 800px)
+          position: absolute
+        @media only screen and (max-width: 450px)
+          height: $hero-slider-height-mobile
+      .slide-1--img
+        @media only screen and (max-width: 800px)
+          right: auto
+          // at least $hero-slider-height-mobile + .slide-1's margin-top:
+          height: 40em
+          width: auto
+        @media only screen and (max-width: 450px)
+          right: -30em
+          // at least $hero-slider-height-mobile + .slide-1's margin-top:
+          height: 55em
+          width: auto
+      .slide-2--img
+        @media only screen and (max-width: 800px)
+          left: -5em
+          // at least $hero-slider-height-mobile + .slide-2's margin-top:
+          height: 36em
+          width: auto
+        @media only screen and (max-width: 450px)
+          left: -10em
+          // at least $hero-slider-height-mobile + .slide-2's margin-top:
+          height: 60em
+          width: auto
 
 .slide-buttons
   text-align: center
-  margin-top: 2.3em
+  margin-top: -1em
   position: absolute
   left: 1em
+  @media only screen and (min-width: 850px)
+    margin-top: 0
   @media only screen and (max-width: 850px)
     display: none
 
@@ -49,6 +79,15 @@
 
 .slide-1
   margin-top: -21%
+  @media only screen and (max-width: 815px)
+    margin-top: -19%
+  @media only screen and (max-width: 450px)
+    margin-top: -9.5em
 
 .slide-2
   margin-top: -28%
+  @media only screen and (max-width: 815px)
+    margin-top: 0
+  @media only screen and (max-width: 450px)
+    margin-top: -22em
+

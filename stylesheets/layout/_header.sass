@@ -4,32 +4,90 @@
   border-bottom: 0.3em solid $color-tertiary
   padding: 0.1em 5% 0 7%
   overflow: auto
+  z-index: 12
+  @media only screen and (max-width: 800px)
+    padding: 0.1em 3% 0 3%
 
 .logo
   width: 28%
   float: left
+  z-index: 8
+  @media only screen and (max-width: 800px)
+    width: 43%
+  @media only screen and (max-width: 600px)
+    width: 40%
+  @media only screen and (max-width: 450px)
+    width: 60%
+    margin-bottom: 3%
 
-nav
+.side
+  float: right
+  padding: 1em
+  z-index: 7
+  @media only screen and (max-width: 800px)
+    width: 50%
+  @media only screen and (max-width: 600px)
+    width: 60%
+    font-size: 70%
+  @media only screen and (max-width: 450px)
+    display: none
+
+
+.details
+  color: $color-primary--3
+  font-size: 0.5em
+  @media only screen and (max-width: 450px)
+    font-size: 0.55em
+    line-height: 130%
+  a
+    color: $color-primary--3
+    padding: 0 0.3em
+    &:hover
+      color: $color-tertiary
+  .details--icon
+    margin: 0 0.3em 0 0
+  .subsection
+    font-size: 0.1em
+
+#navigation
   float: right
   margin: 1.6em 0 0.4em 0
+  z-index: 5
   li
-    font-family: $font-family--bold
+    font-family: $font-family--primary
+    font-weight: bold
     font-size: 1em
     color: $color-senary
     text-decoration: none
     display: inline-block
     margin: 0 0 0 1.2em
     text-align: right
+    @media only screen and (max-width: 800px)
+      font-size: 0.7em
     &:hover
       color: $color-tertiary
+    &:hover ul
+      display: block
+    ul
+      display: none
+      list-style: none
+      z-index: 20
+      position: fixed
+      background-color: $color-primary--1
+      margin: 0 0 0 -1em
+      padding: 1.8em 0 0.5em 0
+      li
+        padding: 0.8em 1.2em 0.8em 0
+        float: none
+        display: block
+        color: $color-primary--3
+        font-size: 0.8em
+        line-height: 130%
+        text-align: left
+        a:hover
+          color: $color-tertiary
     a
       color: $color-senary
       text-decoration: none
-
-.background-color1
-  background-color: $color-primary
-
-.background-color2
-
-.background-color3
-  background-color: $color-secondary
+      &:hover
+        color: $color-tertiary

@@ -1,0 +1,56 @@
+.plug-box
+  @include side-color-box(1em, 0.9em, $color-primary--1, $color-primary--5, 2.6em, 3em, 1em)
+  width: 29%
+  margin: 0.6em 0 0.6em 67%
+  @media only screen and (max-width: 800px)
+    width: 100%
+    margin-left: 0
+    margin-top: 0
+    position: relative
+  &:first-child
+    @media only screen and (max-width: 450px)
+      top: 3.5em
+  &.border-1:hover,
+  &.border-1:active
+    span,
+    h1
+      color: $color-secondary
+  &.border-2:hover,
+  &.border-2:active
+    span,
+    h1
+      color: $color-quaternary
+  &.border-3:hover,
+  &.border-3:active
+    span,
+    h1
+      color: $color-quinary
+
+button
+  border: 0
+  color: $color-senary
+  font-size: 0.72em
+  border-radius: 0.2em
+  cursor: pointer
+  &:hover
+    color: $color-tertiary
+
+.cta-btn
+  @include side-color-box(0.75em, 1em, $color-primary--1, $color-primary--5, 2.2em, 1.3em, 1.5em)
+  margin: 0.5em 0
+
+.cta-btn--feature
+  padding: 1em 3em 1em 1em
+  font-size: 0.8em
+  span
+    font-size: 1.5em
+
+.submit
+  @include side-color-box(0.75em, 1em, $color-secondary, $color-secondary--2, 2.2em, 1.3em, 1.5em)
+  margin: 0.5em 0
+  color: $color-primary--5
+  &:hover
+    color: $color-primary--5
+    background-color: $color-secondary--1
+    span
+      background-color: $color-secondary

@@ -1,7 +1,6 @@
-@mixin side-color-box($bgcolor, $bgcolor-span, $line-height) {
-  padding: 1em 3em 1em 1em;
+@mixin side-color-box($pad, $pad-2, $bgcolor, $bgcolor-span, $line-height-span, $font-size-span, $width-span) {
+  padding: $pad 3em $pad $pad-2;
   background-color: $bgcolor;
-  font-weight: 700;
   outline: none;
   position: relative;
   overflow: auto;
@@ -10,11 +9,11 @@
     display: block;
     height: 100%;
     position: absolute;
-    line-height: $line-height;
+    line-height: $line-height-span;
     right: 0;
     top: 0;
-    font-size: 3em;
-    width: 2.5em;
+    font-size: $font-size-span;
+    width: $width-span;
     text-align: center;
   }
 }
