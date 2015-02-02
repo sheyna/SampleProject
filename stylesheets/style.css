@@ -134,7 +134,7 @@ a {
 
 .banner {
   width: 100%;
-  background-color: #2e2e2e;
+  background-color: #000000;
   border-bottom: 0.3em solid #00fffd;
   padding: 0.1em 5% 0 7%;
   overflow: auto;
@@ -197,12 +197,16 @@ a {
   #navigation li {
     font-family: "open_sansregular", Tahoma, Geneva, sans-serif;
     font-weight: bold;
-    font-size: 1em;
     color: #ffffff;
     text-decoration: none;
     display: inline-block;
     margin: 0 0 0 1.2em;
-    text-align: right; }
+    text-align: right;
+    font-size: 1em; }
+    @media only screen and (max-width: 675px) {
+      #navigation li {
+        margin-left: 0.4em;
+        font-size: 1em; } }
     @media only screen and (max-width: 800px) {
       #navigation li {
         font-size: 0.7em; } }
@@ -215,19 +219,41 @@ a {
       list-style: none;
       z-index: 20;
       position: fixed;
-      background-color: #2e2e2e;
-      margin: 0 0 0 -1em;
-      padding: 1.8em 0 0.5em 0; }
+      background-color: #000000;
+      margin-top: 2.7em; }
+      @media only screen and (min-width: 700px) {
+        #navigation li ul {
+          margin-top: 2.7em; } }
+      @media only screen and (min-width: 815px) {
+        #navigation li ul {
+          margin-top: 1.8em; } }
+      @media only screen and (min-width: 1330px) {
+        #navigation li ul {
+          margin-top: 1.9em; } }
+      @media only screen and (min-width: 1390px) {
+        #navigation li ul {
+          margin-top: 2.1em; } }
+      @media only screen and (min-width: 1430px) {
+        #navigation li ul {
+          margin-top: 2.2em; } }
       #navigation li ul li {
-        padding: 0.8em 1.2em 0.8em 0;
+        padding: 0.8em 1.2em 0.8em 1em;
+        margin-left: -1em;
         float: none;
         display: block;
         color: #a6a6a6;
-        font-size: 0.8em;
+        background-color: #000000;
+        font-size: 0.7em;
         line-height: 130%;
         text-align: left; }
         #navigation li ul li a:hover {
           color: #00fffd; }
+        #navigation li ul li:hover {
+          background-color: #2e2e2e; }
+        #navigation li ul li:first-child {
+          padding-top: 1.3em; }
+        #navigation li ul li:last-child {
+          padding-bottom: 1.3em; }
     #navigation li a {
       color: #ffffff;
       text-decoration: none; }
@@ -248,9 +274,8 @@ a {
   @media only screen and (max-width: 450px) {
     .hero {
       padding: 4%;
-      font-size: 120%;
-      margin-top: -36em;
-      height: 36em; } }
+      margin-top: -35em;
+      height: 35em; } }
   .hero header {
     position: relative;
     float: left;
@@ -265,8 +290,8 @@ a {
         top: 0em; } }
   @media only screen and (max-width: 800px) and (max-width: 450px) {
     .hero header {
-      top: 4em;
-      margin-top: 4em; } }
+      top: 1em;
+      font-size: 120%; } }
 
 .page-title {
   color: #ffffff;
@@ -277,7 +302,7 @@ h1.page-title {
   margin-bottom: 0.4em; }
   @media only screen and (max-width: 450px) {
     h1.page-title {
-      font-size: 1.9em;
+      font-size: 2em;
       line-height: 130%; } }
 
 h2.page-title {
@@ -296,7 +321,7 @@ h2.page-title {
       height: 26em; } }
   @media only screen and (max-width: 450px) {
     .slider {
-      height: 36em; } }
+      height: 35em; } }
 
 .slide-viewer {
   position: relative;
@@ -307,7 +332,7 @@ h2.page-title {
       height: 26em; } }
   @media only screen and (max-width: 450px) {
     .slide-viewer {
-      height: 36em; } }
+      height: 35em; } }
   .slide-viewer .slide-group {
     width: 100%;
     height: 100%;
@@ -326,7 +351,7 @@ h2.page-title {
             position: absolute; } }
         @media only screen and (max-width: 450px) {
           .slide-viewer .slide-group .slide img {
-            height: 36em; } }
+            height: 35em; } }
       @media only screen and (max-width: 800px) {
         .slide-viewer .slide-group .slide .slide-1--img {
           right: auto;
@@ -339,8 +364,8 @@ h2.page-title {
           width: auto; } }
       @media only screen and (max-width: 800px) {
         .slide-viewer .slide-group .slide .slide-2--img {
-          left: -5em;
-          height: 36em;
+          left: 0em;
+          height: 38em;
           width: auto; } }
       @media only screen and (max-width: 450px) {
         .slide-viewer .slide-group .slide .slide-2--img {
@@ -416,8 +441,11 @@ h2.page-title {
       margin-top: 0;
       position: relative; } }
   @media only screen and (max-width: 450px) {
+    .plug-box {
+      font-size: 120%; } }
+  @media only screen and (max-width: 450px) {
     .plug-box:first-child {
-      top: 3.5em; } }
+      top: 0.5em; } }
   .plug-box.border-1:hover span,
   .plug-box.border-1:hover h1, .plug-box.border-1:active span,
   .plug-box.border-1:active h1 {
@@ -492,7 +520,6 @@ button {
 
 .sidr {
   display: none;
-  position: absolute;
   position: fixed;
   top: 0;
   height: 100%;
@@ -502,55 +529,42 @@ button {
   overflow-y: auto;
   font-family: "open_sansregular", Tahoma, Geneva, sans-serif;
   font-size: 1em;
-  background-color: #2e2e2e;
+  background-color: #000000;
   color: #ffffff; }
   .sidr .sidr-inner {
-    padding: 0 0 15px; }
-    .sidr .sidr-inner > p {
-      margin-left: 15px;
-      margin-right: 15px; }
+    padding: 0 0 15px 0; }
   .sidr.right {
     left: auto;
     right: -260px; }
-  .sidr.left {
-    left: -260px;
-    right: auto; }
   .sidr ul {
     display: block;
     margin: 0 0 15px;
-    padding: 0;
-    border-top: 1px solid #1a1a1a;
-    border-bottom: 1px solid #4d4d4d; }
+    padding: 0; }
     .sidr ul li {
       display: block;
       margin: 0;
-      line-height: 48px;
-      border-top: 1px solid #4d4d4d;
-      border-bottom: 1px solid #1a1a1a; }
+      line-height: 190%;
+      padding: 0 15px; }
       .sidr ul li:hover, .sidr ul li.active, .sidr ul li.sidr-class-active {
-        border-top: none;
-        line-height: 49px; }
+        line-height: 190%; }
         .sidr ul li:hover:hover, .sidr ul li.active:hover, .sidr ul li.sidr-class-active:hover {
           color: #00fffd; }
       .sidr ul li a {
-        padding: 0 15px;
         display: block;
         text-decoration: none;
         color: #fff; }
       .sidr ul li ul {
-        border-bottom: none;
         margin: 0; }
         .sidr ul li ul li {
-          line-height: 40px;
-          font-size: 13px; }
-          .sidr ul li ul li:last-child {
-            border-bottom: none; }
+          font-size: 0.7em;
+          line-height: 190%;
+          color: #a6a6a6;
+          padding: 0; }
           .sidr ul li ul li:hover, .sidr ul li ul li .sidr ul li ul li.active, .sidr ul li ul li .sidr ul li ul li.sidr-class-active {
-            border-top: none;
-            line-height: 41px;
-            color: #00fffd; }
+            line-height: 190%;
+            color: #a6a6a6; }
           .sidr ul li ul li a {
-            padding-left: 30px; }
+            color: #a6a6a6; }
 
 #sidr.right {
   display: none; }
@@ -578,6 +592,12 @@ button {
       display: block;
       right: 0;
       z-index: 2; } }
+
+.nav-home-link {
+  display: none; }
+  @media only screen and (max-width: 450px) {
+    .nav-home-link {
+      display: block; } }
 
 .col {
   display: block;
@@ -800,7 +820,8 @@ input {
     height: 2.6em;
     -webkit-appearance: none;
     z-index: 9;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    -moz-appearance: none; }
 
 .sidebox {
   padding: 1.6em 3%;
