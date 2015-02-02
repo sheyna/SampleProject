@@ -144,9 +144,22 @@ a {
       padding: 0.1em 3% 0 3%; } }
 
 .logo {
-  width: 28%;
+  width: 30%;
   float: left;
-  z-index: 8; }
+  z-index: 8;
+  margin-bottom: 1%; }
+  @media only screen and (max-width: 1020px) {
+    .logo {
+      width: 28%; } }
+  @media only screen and (max-width: 1020px) {
+    .logo {
+      width: 28%; } }
+  @media only screen and (max-width: 950px) {
+    .logo {
+      width: 39%; } }
+  @media only screen and (max-width: 850px) {
+    .logo {
+      width: 36%; } }
   @media only screen and (max-width: 800px) {
     .logo {
       width: 43%; } }
@@ -214,28 +227,109 @@ a {
       color: #00fffd; }
     #navigation li:hover ul {
       display: block; }
+    #navigation li:after {
+      content: "";
+      position: absolute;
+      top: -4.5em;
+      left: -1em;
+      height: 4.5em;
+      width: 100%;
+      display: block;
+      z-index: 1001; }
     #navigation li ul {
       display: none;
       list-style: none;
       z-index: 20;
       position: fixed;
       background-color: #000000;
-      margin-top: 2.7em; }
-      @media only screen and (min-width: 700px) {
+      margin-top: 2.3em; }
+      @media only screen and (min-width: 550px) {
+        #navigation li ul {
+          margin-top: 2.5em; } }
+      @media only screen and (min-width: 600px) {
         #navigation li ul {
           margin-top: 2.7em; } }
-      @media only screen and (min-width: 815px) {
+      @media only screen and (min-width: 740px) {
+        #navigation li ul {
+          margin-top: 3em; } }
+      @media only screen and (min-width: 740px) {
+        #navigation li ul {
+          margin-top: 3.2em; } }
+      @media only screen and (min-width: 780px) {
+        #navigation li ul {
+          margin-top: 3.4em; } }
+      @media only screen and (min-width: 800px) {
         #navigation li ul {
           margin-top: 1.8em; } }
-      @media only screen and (min-width: 1330px) {
+      @media only screen and (min-width: 885px) {
         #navigation li ul {
           margin-top: 1.9em; } }
-      @media only screen and (min-width: 1390px) {
+      @media only screen and (min-width: 900px) {
         #navigation li ul {
-          margin-top: 2.1em; } }
-      @media only screen and (min-width: 1430px) {
+          margin-top: 2em; } }
+      @media only screen and (min-width: 920px) {
         #navigation li ul {
           margin-top: 2.2em; } }
+      @media only screen and (min-width: 940px) {
+        #navigation li ul {
+          margin-top: 2.3em; } }
+      @media only screen and (min-width: 950px) {
+        #navigation li ul {
+          margin-top: 1.8em; } }
+      @media only screen and (min-width: 1110px) {
+        #navigation li ul {
+          margin-top: 1.9em; } }
+      @media only screen and (min-width: 1130px) {
+        #navigation li ul {
+          margin-top: 2em; } }
+      @media only screen and (min-width: 1160px) {
+        #navigation li ul {
+          margin-top: 2.2em; } }
+      @media only screen and (min-width: 1190px) {
+        #navigation li ul {
+          margin-top: 2.3em; } }
+      @media only screen and (min-width: 1225px) {
+        #navigation li ul {
+          margin-top: 2.4em; } }
+      @media only screen and (min-width: 1240px) {
+        #navigation li ul {
+          margin-top: 2.5em; } }
+      @media only screen and (min-width: 1260px) {
+        #navigation li ul {
+          margin-top: 2.6em; } }
+      @media only screen and (min-width: 1300px) {
+        #navigation li ul {
+          margin-top: 2.8em; } }
+      @media only screen and (min-width: 1325px) {
+        #navigation li ul {
+          margin-top: 2.9em; } }
+      @media only screen and (min-width: 1345px) {
+        #navigation li ul {
+          margin-top: 3em; } }
+      @media only screen and (min-width: 1360px) {
+        #navigation li ul {
+          margin-top: 3.1em; } }
+      @media only screen and (min-width: 1390px) {
+        #navigation li ul {
+          margin-top: 3.2em; } }
+      @media only screen and (min-width: 1410px) {
+        #navigation li ul {
+          margin-top: 3.3em; } }
+      @media only screen and (min-width: 1440px) {
+        #navigation li ul {
+          margin-top: 3.4em; } }
+      @media only screen and (min-width: 1470px) {
+        #navigation li ul {
+          margin-top: 3.5em; } }
+      #navigation li ul:before {
+        content: "";
+        position: absolute;
+        border-right: 1em solid transparent;
+        border-left: 1em solid transparent;
+        top: 0;
+        left: 42%;
+        display: block;
+        z-index: 1002; }
       #navigation li ul li {
         padding: 0.8em 1.2em 0.8em 1em;
         margin-left: -1em;
@@ -818,10 +912,15 @@ input {
     border-radius: 0;
     width: 100%;
     height: 2.6em;
-    -webkit-appearance: none;
     z-index: 9;
     margin-bottom: 0;
+    -webkit-appearance: none;
     -moz-appearance: none; }
+    .select-style select:focus {
+      border: 0;
+      outline: none;
+      color: transparent;
+      text-shadow: 0 0 0 gray; }
 
 .sidebox {
   padding: 1.6em 3%;

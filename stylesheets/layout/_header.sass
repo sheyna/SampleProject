@@ -9,9 +9,18 @@
     padding: 0.1em 3% 0 3%
 
 .logo
-  width: 28%
+  width: 30%
   float: left
   z-index: 8
+  margin-bottom: 1%
+  @media only screen and (max-width: 1020px)
+    width: 28%
+  @media only screen and (max-width: 1020px)
+    width: 28%
+  @media only screen and (max-width: 950px)
+    width: 39%
+  @media only screen and (max-width: 850px)
+    width: 36%
   @media only screen and (max-width: 800px)
     width: 43%
   @media only screen and (max-width: 600px)
@@ -71,23 +80,88 @@
       color: $color-tertiary
     &:hover ul
       display: block
+    // allows hover to work between parent li and child ul:
+    &:after
+      content: ""
+      position: absolute
+      // must be same as "height" but negative:
+      top: -4.5em
+      left: -1em
+      // must be same as "top" but positive:
+      height: 4.5em
+      width: 100%
+      display: block
+      z-index: 1001
     ul
       display: none
       list-style: none
       z-index: 20
       position: fixed
       background-color: $color-primary
-      margin-top: 2.7em
-      @media only screen and (min-width: 700px)
+      // linked to .logo's max-width. improve with Calc?
+      margin-top: 2.3em
+      @media only screen and (min-width: 550px)
+        margin-top: 2.5em
+      @media only screen and (min-width: 600px)
         margin-top: 2.7em
-      @media only screen and (min-width: 815px)
+      @media only screen and (min-width: 740px)
+        margin-top: 3em
+      @media only screen and (min-width: 740px)
+        margin-top: 3.2em
+      @media only screen and (min-width: 780px)
+        margin-top: 3.4em
+      @media only screen and (min-width: 800px)
         margin-top: 1.8em
-      @media only screen and (min-width: 1330px)
+      @media only screen and (min-width: 885px)
         margin-top: 1.9em
-      @media only screen and (min-width: 1390px)
-        margin-top: 2.1em
-      @media only screen and (min-width: 1430px)
+      @media only screen and (min-width: 900px)
+        margin-top: 2em
+      @media only screen and (min-width: 920px)
         margin-top: 2.2em
+      @media only screen and (min-width: 940px)
+        margin-top: 2.3em
+      @media only screen and (min-width: 950px)
+        margin-top: 1.8em
+      @media only screen and (min-width: 1110px)
+        margin-top: 1.9em
+      @media only screen and (min-width: 1130px)
+        margin-top: 2em
+      @media only screen and (min-width: 1160px)
+        margin-top: 2.2em
+      @media only screen and (min-width: 1190px)
+        margin-top: 2.3em
+      @media only screen and (min-width: 1225px)
+        margin-top: 2.4em
+      @media only screen and (min-width: 1240px)
+        margin-top: 2.5em
+      @media only screen and (min-width: 1260px)
+        margin-top: 2.6em
+      @media only screen and (min-width: 1300px)
+        margin-top: 2.8em
+      @media only screen and (min-width: 1325px)
+        margin-top: 2.9em
+      @media only screen and (min-width: 1345px)
+        margin-top: 3em
+      @media only screen and (min-width: 1360px)
+        margin-top: 3.1em
+      @media only screen and (min-width: 1390px)
+        margin-top: 3.2em
+      @media only screen and (min-width: 1410px)
+        margin-top: 3.3em
+      @media only screen and (min-width: 1440px)
+        margin-top: 3.4em
+      @media only screen and (min-width: 1470px)
+        margin-top: 3.5em
+      // allows hover to work between parent li and child ul:
+      &:before
+        content: ""
+        position: absolute
+        border-right: 1em solid transparent
+        border-left: 1em solid transparent
+        top: 0
+        left: 42%
+        display: block
+        z-index: 1002
       li
         padding: 0.8em 1.2em 0.8em 1em
         margin-left: -1em
