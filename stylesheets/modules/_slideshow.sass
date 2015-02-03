@@ -19,55 +19,48 @@
     width: 100%
     height: 100%
     position: relative
-    .slide
-      width: 100%
-      height: 100%
-      display: none
+
+.slide
+  width: 100%
+  height: 100%
+  display: none
+  position: absolute
+  &:first-child
+    display: block
+  img
+    width: 100%
+    @media only screen and (max-width: 800px)
       position: absolute
-      &:first-child
-        display: block
-      img
-        width: 100%
-        @media only screen and (max-width: 800px)
-          position: absolute
-        @media only screen and (max-width: 450px)
-          height: $hero-slider-height-mobile
-      .slide-1--img
-        @media only screen and (max-width: 800px)
-          right: auto
-          // at least $hero-slider-height-mobile + .slide-1's margin-top:
-          height: 40em
-          width: auto
-        @media only screen and (max-width: 450px)
-          right: -30em
-          // at least $hero-slider-height-mobile + .slide-1's margin-top:
-          height: 55em
-          width: auto
-      .slide-2--img
-        @media only screen and (max-width: 800px)
-          left: 0em
-          // at least $hero-slider-height-mobile + .slide-2's margin-top:
-          height: 38em
-          width: auto
-        @media only screen and (max-width: 450px)
-          left: -10em
-          // at least $hero-slider-height-mobile + .slide-2's margin-top:
-          height: 60em
-          width: auto
-
-.slide-1
-  margin-top: -21%
-  @media only screen and (max-width: 815px)
-    margin-top: -19%
-  @media only screen and (max-width: 450px)
-    margin-top: -9.5em
-
-.slide-2
-  margin-top: -28%
-  @media only screen and (max-width: 815px)
-    margin-top: 0
-  @media only screen and (max-width: 450px)
-    margin-top: -22em
+    @media only screen and (max-width: 450px)
+      height: $hero-slider-height-mobile
+  .slide-1--img
+    margin-top: -21%
+    @media only screen and (max-width: 800px)
+      right: auto
+      // at least $hero-slider-height-mobile + .slide-1's margin-top:
+      height: 40em
+      width: auto
+      margin-top: -19%
+    @media only screen and (max-width: 450px)
+      right: -30em
+      // at least $hero-slider-height-mobile + .slide-1's margin-top:
+      height: 55em
+      width: auto
+      margin-top: -9.5em
+  .slide-2--img
+    margin-top: -28%
+    @media only screen and (max-width: 800px)
+      left: 0em
+      // at least $hero-slider-height-mobile + .slide-2's margin-top:
+      height: 38em
+      width: auto
+      margin-top: 0
+    @media only screen and (max-width: 450px)
+      left: -10em
+      // at least $hero-slider-height-mobile + .slide-2's margin-top:
+      height: 60em
+      width: auto
+      margin-top: -22em
 
 .slide-buttons
   text-align: center
